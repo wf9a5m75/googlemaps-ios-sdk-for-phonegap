@@ -1,3 +1,12 @@
+Version 1.8.1 - May 2014
+========================
+Resolved Issues:
+  - Resolved GMSTileLayer not displaying
+  - Resolved a rare case where an app would crash when displaying polylines
+    while accessibility features are enabled
+  - mapView:willMove: is no longer called alongside a tap gesture
+  - Resolved symbol collisions with the Protocol Buffer library
+
 Version 1.8.0 - May 2014
 ========================
 Resolved Issues:
