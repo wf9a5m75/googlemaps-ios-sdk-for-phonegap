@@ -8,6 +8,10 @@
     
     <!-- ios -->
     <platform name="ios">
+    
+        <info>
+        Google Maps SDK for iOS : v1.8.1
+        </info>
       
         <!-- system frameworks -->
         <framework src="AVFoundation.framework" />
@@ -24,7 +28,7 @@
         <framework src="SystemConfiguration.framework" />
         <framework src="GoogleMaps.framework" custom="true"/>
         
-        <resource-file src="GoogleMaps.framework/Versions/Current/Resources/GoogleMaps.bundle"/>
+        <resource-file src="GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"/>
         
     </platform>
 </plugin>
