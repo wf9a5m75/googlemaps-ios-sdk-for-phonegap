@@ -24,7 +24,7 @@
         <framework src="SystemConfiguration.framework" />
         <framework src="GoogleMaps.framework" custom="true"/>
         
-        <resource-file src="GoogleMaps.framework/Resources/GoogleMaps.bundle"/>
+        <resource-file src="GoogleMaps.framework/Versions/Current/Resources/GoogleMaps.bundle"/>
         
     </platform>
 </plugin>
