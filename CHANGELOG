@@ -1,3 +1,21 @@
+Version 1.9.2 - February 2015
+=============================
+Resolved Issues:
+  - Show correct characters for Myanmar place labels.
+  - Fixed small memory leak related to font registration.
+  - Fixed large memory leak in rare cases where My Location is enabled and the user rotates
+    the screen.
+  - Correctly show ground overlays defined by zoom level which extend across >180 degrees
+    of longitude.
+  - Allow selected marker to be set during mapView:didTapAtCoordinate:.
+  - Throw exception rather than crash when map services are initialized while application is
+    in background.
+  - Raise mapView:willMove: and mapView:idleAtCameraPosition: even for swipe motions which
+    last less than 30ms.
+  - Correctly handle animations starting while a gesture is decelerating.
+  - Always return an error from GMSPanoramaService callbacks if panorama is nil.
+  - Don't attempt to navigate to empty panorama if moveNearCoordinate: resolves to nil.
+
 Version 1.9.1 - December 2014
 =============================
 Resolved Issues:
