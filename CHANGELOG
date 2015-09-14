@@ -1,3 +1,57 @@
+Version 1.10.2 - July 2015
+==========================
+Resolved Issues:
+  - Fixed a crash releasing a map view while in background.
+  - Resolved a conflict with apps using gtm-session-fetcher resumable downloads.
+  - Recompiled with Xcode 6.4 to avoid some bugs in Xcode 6.3 compiler.
+  - Updated GoogleMaps.bundle info.plist to avoid triggering new checks in
+    pre-submission verification.
+
+Version 1.10.1 - June 2015
+==========================
+Resolved Issues:
+  - Fixed an issue where instantiating GMSPlacesClient triggered a request to enable Bluetooth.
+  - Miscellaneous improvements to the GMSPlacePicker UI.
+
+Version 1.10.0 - May 2015
+=========================
+Major Feature:
+  - Places API is now bundled with the Google Maps SDK for iOS.
+
+Features:
+  - New allowScrollGesturesDuringRotateOrZoom property on GMSUISettings controls whether
+    the user can scroll by panning during multi-touch rotate or zoom gestures.
+  - GMSPanoramaView now supports being used via storyboard.
+  - GMSGeocoder now supports being used while the application is in the background.
+  - GMSServices sharedServices can now be called while application is in the background. Note
+    that if the first call to sharedServices is while application is in the background some
+    async initialization work will be deferred until the first time a map is shown where it will
+    be performed synchronously.
+  - GMSMapView/GMSPanoramaView init messages can now be handled while the application is in
+    background.  This should remove the last case where GMSMapView/GMSPanoramaView could not
+    be used in the background.
+  - GMSMapView/GMSPanormaView delegate properties now support IBOutlet for easier use via
+    storyboard.
+
+Resolved Issues:
+  - mapView:didTapMyLocationButtonForMapView: is now correctly called even if no location is
+    available.
+  - GMSGroundOverlay now shows correctly when rotated if image aspect ratio doesn't match the
+    selected ground region.
+  - Fixed an issue resizing the map on iOS 8.
+  - Fixed a rare crash under fast camera changes.
+  - Map no longer hangs when adding a ground overlay with certain invalid bounds.
+  - Fixed a crash when texture memory is exhausted by markers.
+  - Correctly return the tapped GMSCircle to mapView:didTapOverlay: for tappable circles.
+  - mapView:idleAtCameraPosition: will now be called even if there is an ongoing update of the
+    my location dot.
+
+Notes:
+  - Due to an ABI change in the Xcode compiler, Xcode 6.3 is now the only supported version for
+    compiling against Google Maps SDK for iOS.
+  - The minimum target iOS version for Google Maps SDK for iOS is now 7.0.  Version 6.0 is no
+    longer supported.
+
 Version 1.9.2 - February 2015
 =============================
 Resolved Issues:
@@ -51,6 +105,9 @@ Resolved Issues:
 
 Version 1.8.0 - May 2014
 ========================
+Features:
+  - Support for Maps Engine Layers
+
 Resolved Issues:
   - Resolved threading deadlock prominent on iPhone 4 running iOS 7.1 or later
   - GMSMapView correctly releases some shared GL state previously causing
